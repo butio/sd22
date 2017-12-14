@@ -112,4 +112,6 @@ public class MemberLegist {
 	public String errorAdoress(){
 		return this.errorAdoress;
 	}
+	
+	public String error
 }
