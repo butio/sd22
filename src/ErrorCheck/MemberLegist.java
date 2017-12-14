@@ -7,14 +7,14 @@ public class MemberLegist {
 	private String adoress;
 	private String telnumber;
 	private String card;
-	
+
 	private String errorName;
 	private String errorMail;
 	private String errorPass;
 	private String errorAdoress;
 	private String errorTelnumber;
 	private String errorCard;
-	
+
 	public MemberLegist(){
 		this.name = "";
 		this.mail = "";
@@ -112,6 +112,8 @@ public class MemberLegist {
 	public String errorAdoress(){
 		return this.errorAdoress;
 	}
-	
-	public String error
+
+	public String errorTelnumber(){
+		return this.errorTelnumber;
+	}
 }
