@@ -61,7 +61,7 @@ public class MemberRegist {
 		}
 		this.address = val;
 	}
-	public void setTelbumber(String val){
+	public void setTelnumber(String val){
 		if(val.equals("")){
 			this.errorTelnumber = "電話番号が未入力です。";
 		}else if(!ErrorCheck.isNumeric(val)){
