@@ -4,14 +4,14 @@ public class MemberRegist {
 	private String name;
 	private String mail;
 	private String pass;
-	private String adoress;
+	private String address;
 	private String telnumber;
 	private String card;
 
 	private String errorName;
 	private String errorMail;
 	private String errorPass;
-	private String errorAdoress;
+	private String errorAddress;
 	private String errorTelnumber;
 	private String errorCard;
 
@@ -19,13 +19,13 @@ public class MemberRegist {
 		this.name = "";
 		this.mail = "";
 		this.pass = "";
-		this.adoress = "";
+		this.address = "";
 		this.telnumber = "";
 		this.card = "";
 		this.errorName = "";
 		this.errorMail = "";
 		this.errorPass = "";
-		this.errorAdoress = "";
+		this.errorAddress = "";
 		this.errorTelnumber = "";
 		this.errorCard = "";
 	}
@@ -53,13 +53,13 @@ public class MemberRegist {
 		}
 		this.pass = val;
 	}
-	public void setAdoress(String val){
+	public void setAddress(String val){
 		if(val.equals("")){
-			this.errorAdoress = "住所が未入力です。";
+			this.errorAddress = "住所が未入力です。";
 		}else if(!ErrorCheck.isLength(1, 100, val)){
-			this.errorAdoress = "100文字以内で入力してください。";
+			this.errorAddress = "100文字以内で入力してください。";
 		}
-		this.adoress = val;
+		this.address = val;
 	}
 	public void setTelbumber(String val){
 		if(val.equals("")){
@@ -92,7 +92,7 @@ public class MemberRegist {
 		return this.pass;
 	}
 	public String getAdoress(){
-		return this.adoress;
+		return this.address;
 	}
 	public String getTelnumber(){
 		return this.telnumber;
@@ -110,7 +110,7 @@ public class MemberRegist {
 		return this.errorPass;
 	}
 	public String errorAdoress(){
-		return this.errorAdoress;
+		return this.errorAddress;
 	}
 
 	public String errorTelnumber(){

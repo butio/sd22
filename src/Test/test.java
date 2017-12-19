@@ -44,7 +44,7 @@ public class test extends HttpServlet {
 		m.setName("伊勢田和雅");
 		m.setMail("iseise@yahoo.co.jp");
 		m.setPass("123456");
-		m.setAdoress("大阪市北区中津");
+		m.setAddress("大阪市北区中津");
 		m.setTelbumber("09012341234");
 		m.setCard("1234567890");
 		System.out.println(m.getName());
