@@ -8,7 +8,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import ErrorCheck.MemberLegist;
+import ErrorCheck.MemberRegist;
 /**
  * Servlet implementation class test
  */
@@ -40,7 +40,7 @@ public class test extends HttpServlet {
 //		String tel = request.getParameter("tel");
 //		String card = request.getParameter("card");
 //		System.out.println(name);
-		MemberLegist m = new MemberLegist();
+		MemberRegist m = new MemberRegist();
 		m.setName("伊勢田和雅");
 		m.setMail("iseise@yahoo.co.jp");
 		m.setPass("123456");
