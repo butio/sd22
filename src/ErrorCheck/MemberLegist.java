@@ -116,4 +116,8 @@ public class MemberLegist {
 	public String errorTelnumber(){
 		return this.errorTelnumber;
 	}
+
+	public String errorCard(){
+		return this.errorCard;
+	}
 }

@@ -1,6 +1,7 @@
 package ErrorCheck;
 
 public class ErrorCheck {
+	static String mailFormat= "^[a-zA-Z0-9!#$%&'_`/=~\\*\\+\\-\\?\\^\\{\\|\\}]+(\\.[a-zA-Z0-9!#$%&'_`/=~\\*\\+\\-\\?\\^\\{\\|\\}]+)*+(.*)@[a-zA-Z0-9][a-zA-Z0-9\\-]*(\\.[a-zA-Z0-9\\-]+)+$";
 
 	public static boolean isNumeric(String str){
 		for(int i = 0;i<str.length();i++){
@@ -17,7 +18,7 @@ public class ErrorCheck {
 		}
 	}
 	public static boolean isMail(String str3){
-		if(str3.contains("%@%.%")){
+		if(str3.matches(mailFormat)){
 			return true;
 		}else{
 			return false;

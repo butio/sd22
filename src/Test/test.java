@@ -32,10 +32,33 @@ public class test extends HttpServlet {
 		//文字化け対策
 		request.setCharacterEncoding("utf-8");
 		response.setContentType("text/html; charset=UTF-8");
+
+		String name = request.getParameter("name");
+		String mail = request.getParameter("mail");
+		String pass = request.getParameter("pass");
+		String ado = request.getParameter("ado");
+		String tel = request.getParameter("tel");
+		String card = request.getParameter("card");
+		System.out.println(name);
 		MemberLegist m = new MemberLegist();
-		m.setName("伊勢田和雅");
+		m.setName(name);
+		m.setMail(mail);
+		m.setPass(pass);
+		m.setAdoress(ado);
+		m.setTelbumber(tel);
+		m.setCard(card);
 		System.out.println(m.getName());
 		System.out.println(m.errorName());
+		System.out.println(m.getMail());
+		System.out.println(m.errorMail());
+		System.out.println(m.getPass());
+		System.out.println(m.errorPass());
+		System.out.println(m.getAdoress());
+		System.out.println(m.errorAdoress());
+		System.out.println(m.getTelnumber());
+		System.out.println(m.errorTelnumber());
+		System.out.println(m.getCard());
+		System.out.println(m.errorCard());
 	}
 
 	/**
