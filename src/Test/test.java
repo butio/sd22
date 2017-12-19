@@ -41,7 +41,7 @@ public class test extends HttpServlet {
 //		String card = request.getParameter("card");
 //		System.out.println(name);
 		MemberLegist m = new MemberLegist();
-		m.setName("伊勢田");
+		m.setName("伊勢田和雅");
 		m.setMail("iseise@yahoo.co.jp");
 		m.setPass("123456");
 		m.setAdoress("大阪市北区中津");
