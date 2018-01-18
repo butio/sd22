@@ -2,6 +2,7 @@ package ErrorCheck;
 
 public class MemberRegist {
 	private String name;
+	private String nickname;
 	private String mail;
 	private String pass;
 	private String address;
@@ -10,6 +11,7 @@ public class MemberRegist {
 	private String contact;
 
 	private String errorName;
+	private String errorNickname;
 	private String errorMail;
 	private String errorPass;
 	private String errorAddress;
@@ -21,6 +23,7 @@ public class MemberRegist {
 
 	public MemberRegist(){
 		this.name = "";
+		this.nickname = "";
 		this.mail = "";
 		this.pass = "";
 		this.address = "";
@@ -28,6 +31,7 @@ public class MemberRegist {
 		this.card = "";
 		this.contact = "";
 		this.errorName = "";
+		this.errorNickname = "";
 		this.errorMail = "";
 		this.errorPass = "";
 		this.errorAddress = "";
@@ -37,13 +41,23 @@ public class MemberRegist {
 	}
 	public void setName(String val){
 		if(val.equals("")){
-			this.errorName = "氏名が未入力です。";
+			this.errorName = "名前が未入力です。";
 			this.errFlg = true;
 		}else if(!ErrorCheck.isLength(1, 15, val)){
 			this.errorName = "1から15文字の間で入力してください。";
 			this.errFlg = true;
 		}
 		this.name = val;
+	}
+	public void setNickname(String val){
+		if(val.equals("")){
+			this.errorName = "ニックネームが未入力です。";
+			this.errFlg = true;
+		}else if(!ErrorCheck.isLength(1, 15, val)){
+			this.errorName = "1から15文字の間で入力してください。";
+			this.errFlg = true;
+		}
+		this.nickname = val;
 	}
 	public void setMail(String val){
 		if(val.equals("")){
@@ -112,6 +126,9 @@ public class MemberRegist {
 	public String getName(){
 			return this.name;
 	}
+	public String getNickname(){
+		return this.nickname;
+}
 	public String getMail(){
 		return this.mail;
 	}
@@ -130,10 +147,13 @@ public class MemberRegist {
 	public String getContact(){
 		return this.contact;
 	}
-	
+
 	//エラー
 	public String errorName(){
 		return this.errorName;
+	}
+	public String errorNickname(){
+		return this.errorNickname;
 	}
 	public String errorMail(){
 		return this.errorMail;

@@ -1,5 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ page import = "ErrorCheck.MemberRegist" %>
+
+<% MemberRegist m = (MemberRegist)request.getAttribute("MEMBER"); %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html lang="ja">
 <head>
@@ -108,54 +111,46 @@
         <div class="form">
           <p> 下記フォームをご入力の上、「確認画面へ」をクリックしてください。</p>
           <form action="./newuserconfirm.jsp" method="post" enctype="multipart/form-data">
-            <input type="hidden" name="need" value="お名前 email 会社名 メッセージ" />
-            <input type="hidden" name="match" value="email email2" />
             <dl class="clearfix">
               <dt>お名前（漢字）<span class="required">【必須】</span></dt>
               <dd>
-                <input name="name" type="text" class="txt" />
+                <input name="name" type="text" class="txt" value="<%=m.getName()%>"/>
               </dd>
             </dl>
             <dl class="clearfix">
               <dt>ニックネーム<span class="required">【必須】</span></dt>
               <dd>
-                <input name="nickname" type="text" class="txt" />
+                <input name="nickname" type="text" class="txt" value="<%=m.getNickname()%>"/>
               </dd>
             </dl>
             <dl class="clearfix">
               <dt>メールアドレス<span class="required">【必須】</span></dt>
               <dd>
-                <input name="email" type="text" class="txt ina" />
-              </dd>
-            </dl>
-            <dl class="clearfix">
-              <dt>メールアドレス再入力<span class="required">【必須】</span></dt>
-              <dd>
-                <input name="email2" type="text" class="txt ina" />
+                <input name="email" type="text" class="txt ina" value="<%=m.getMail()%>"/>
               </dd>
             </dl>
             <dl class="clearfix">
               <dt>パスワード<span class="required">【必須】</span></dt>
               <dd>
-                <input name="pass" type="text" class="txt ina" />
+                <input name="pass" type="text" class="txt ina" value="<%=m.getPass()%>"/>
               </dd>
             </dl>
             <dl class="clearfix">
               <dt>住所<span class="required">【必須】</span></dt>
               <dd>
-                <input name="address" type="text" class="txt ina" />
+                <input name="address" type="text" class="txt ina" value="<%=m.getAdoress()%>"/>
               </dd>
             </dl>
             <dl class="clearfix">
               <dt>電話番号<span class="required">【必須】</span></dt>
               <dd>
-                <input name="tel" type="text" class="txt ina" />
+                <input name="tell" type="text" class="txt ina" value="<%=m.getTelnumber()%>"/>
               </dd>
             </dl>
             <dl class="clearfix">
               <dt>クレジットカード<span class="required">【必須】</span></dt>
               <dd>
-                <input name="card" type="text" class="txt ina" />
+                <input name="card" type="text" class="txt ina" value="<%=m.getCard()%>"/>
               </dd>
             </dl>
             <p class="kakunin">

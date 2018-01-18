@@ -6,7 +6,6 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
-import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -68,8 +67,7 @@ public class ContactRegist extends HttpServlet {
 			String sql="INSERT INTO contact(contact_id,contact,contact_name,contact_mail) VALUES('"+cnt+"','"+contact+"','"+name+"','"+mail+"');";
 			st.executeUpdate(sql);
 
-		RequestDispatcher rd=request.getRequestDispatcher("/index.jsp");
-		rd.forward(request, response);
+			response.sendRedirect("index.html");
 
 		}catch(ClassNotFoundException e){
 			return;
