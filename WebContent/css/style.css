@@ -272,6 +272,14 @@ article li, p {
 
 /* ----- フォーム設定 ----- */
 
+.form_conf {
+    text-align: center;
+}
+.form_conf form {
+    display: inline-block;
+    margin: 0 10px;
+}
+
 .clearfix:after {
     clear: both; /*floatの回り込み解除*/
     content: "."; /*要素の直後に文字列や画像などのコンテンツを挿入*/

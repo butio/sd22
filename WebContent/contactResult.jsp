@@ -1,3 +1,8 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@ page import = "ErrorCheck.MemberRegist" %>
+
+<% MemberRegist m = (MemberRegist)request.getAttribute("MEMBER"); %>
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -105,38 +110,44 @@
       <hr>
       <section>
         <div class="form">
-          <p> 下記フォームをご入力の上、「確認画面へ」をクリックしてください。</p>
-          <form action="./contactconfirm.html" method="post" enctype="multipart/form-data">
-            <input type="hidden" name="need" value="お名前 email 会社名 メッセージ" />
-            <input type="hidden" name="match" value="email email2" />
-            <dl class="clearfix">
-              <dt>お名前（漢字）<span class="required">【必須】</span></dt>
+          <p> 下記フォームを確認の上、「送信」をクリックしてください。</p>
+          <dl class="clearfix">
+              <dt>お名前<span class="required"></span></dt>
               <dd>
-                <input name="お名前" type="text" class="txt" />
+                <%=m.getName() %>
               </dd>
             </dl>
             <dl class="clearfix">
-              <dt>メールアドレス<span class="required">【必須】</span></dt>
+              <dt>メールアドレス<span class="required"></span></dt>
               <dd>
-                <input name="お名前フリガナ" type="text" class="txt" />
+                <%=m.getMail() %>
               </dd>
             </dl>
             <dl class="clearfix">
-              <dt>電話番号<span class="required">【必須】</span></dt>
+              <dt>お問い合せ内容<span class="required"></span></dt>
               <dd>
-                <input name="email" type="text" class="txt ina" />
+              <%=m.getContact() %>
               </dd>
             </dl>
-            <dl class="clearfix">
-              <dt>お問い合せ内容<span class="required">【必須】</span></dt>
-              <dd>
-                <textarea name="お問い合せ内容" rows="5" ></textarea>
-              </dd>
-            </dl>
-            <p class="kakunin">
-              <input type="submit" value="確認画面へ" class="btn_submit">
-            </p>
-          </form>
+
+			<div class="form_conf">
+			<form action="./ContactRegist" method="get">
+			<p class="kakunin" >
+			<input type="submit" value="送信" class="btn_submit">
+			</p>
+			</form>
+
+			<form action="./ContactInput" method="get">
+			<input type="hidden" name="name" value="<%=m.getName() %>">
+			<input type="hidden" name="mail" value="<%=m.getMail() %>">
+			<input type="hidden" name="contact" value="<%=m.getContact() %>">
+			<input type="hidden" name="state" value="back">
+			<p class="kakunin" >
+			<input type="submit" value="戻る" class="btn_submit">
+			</p>
+			</form>
+			</div>
+
         </div>
         <p>※上記フォームを利用するには <a href="http://www.sophia-it.com/content/CGI" target="_blank"> CGI </a> などのプログラムが必要です。</p>
         <p> <a href="http://cgi-design.net/" target="_blank"> CGI-design </a> </p>
