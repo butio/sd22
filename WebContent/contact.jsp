@@ -115,21 +115,21 @@
             <dl class="clearfix">
               <dt>お名前<span class="required">【必須】</span></dt>
               <dd>
-                <input name="name" type="text" class="txt" value="<%=m.getName()%>"/>
+                <input name="name" type="text" class="txt" value="<%=m.getName()%>"/><br>
                 <span class="error"><%=m.errorName() %></span>
               </dd>
             </dl>
             <dl class="clearfix">
               <dt>メールアドレス<span class="required">【必須】</span></dt>
               <dd>
-                <input name="mail" type="text" class="txt" value="<%=m.getMail()%>"/>
+                <input name="mail" type="text" class="txt" value="<%=m.getMail()%>"/><br>
                 <span class="error"><%=m.errorMail() %></span>
               </dd>
             </dl>
             <dl class="clearfix">
               <dt>お問い合せ内容<span class="required">【必須】</span></dt>
               <dd>
-                <textarea name="contact" rows="5" value="<%=m.getContact()%>"></textarea>
+                <textarea name="contact" rows="5"><%=m.getContact()%></textarea><br>
                 <span class="error"><%=m.errorContact() %></span>
               </dd>
             </dl>

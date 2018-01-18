@@ -1,8 +1,10 @@
 package Contact;
-
 import java.io.IOException;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.Statement;
 
-import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -10,19 +12,19 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-import ErrorCheck.MemberRegist;
+import Dao.Dao;
 
 /**
- * Servlet implementation class ContactOutput
+ * Servlet implementation class ContactRegist
  */
-@WebServlet("/ContactOutput")
-public class ContactOutput extends HttpServlet {
+@WebServlet("/ContactRegist")
+public class ContactRegist extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public ContactOutput() {
+    public ContactRegist() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -33,32 +35,41 @@ public class ContactOutput extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 
-
 		request.setCharacterEncoding("UTF-8");
 		response.setCharacterEncoding("UTF-8");
 
 		HttpSession session = request.getSession(true);
 
-		//	リクエストパラメーターの取得
-		MemberRegist m = new MemberRegist();
-		m.setName((String)request.getParameter("name"));
-		m.setMail((String)request.getParameter("mail"));
-		m.setContact((String)request.getParameter("contact"));
+		String name = (String)session.getAttribute("sessionName");
+		String mail = (String)session.getAttribute("sessionMail");
+		String contact = (String)session.getAttribute("sessionContact");
 
-		session.setAttribute("sessionName",m.getName());
-		session.setAttribute("sessionMail",m.getMail());
-		session.setAttribute("sessionContact",m.getContact());
+		int cnt=0;
 
+		Connection con=null;
+		Statement st=null;
+		ResultSet rs=null;
 
-		//エラーがあれば入力画面に遷移する
-		String fileJsp = "/contactResult.jsp";
-		if(m.getJsp()){
-			fileJsp = "/contact.jsp";
+		try{
+			Class.forName("com.mysql.jdbc.Driver");
+			con=DriverManager.getConnection(
+					"jdbc:mysql://localhost/sd22?characterEncoding=utf8","root","");
+
+			st=con.createStatement();
+
+			String sqlcnt="SELECT COUNT(*) FROM contact;";
+			rs=st.executeQuery(sqlcnt);
+
+			while(rs.next()){
+			      cnt=rs.getInt("COUNT(*)");
+			  }
+			cnt += 1;
+
+			String sql="INSERT INTO contact(contact_id,contact,contact_name,contact_mail) VALUES('"
+					+cnt+"','"contact"','"+name+"','"+mail+"');";
+			st.executeUpdate(sql);
 		}
 
-		request.setAttribute("MEMBER",m);
-		RequestDispatcher rd=request.getRequestDispatcher(fileJsp);
-		rd.forward(request, response);
 	}
 
 	/**
