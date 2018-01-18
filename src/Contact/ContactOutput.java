@@ -12,16 +12,16 @@ import javax.servlet.http.HttpServletResponse;
 import ErrorCheck.MemberRegist;
 
 /**
- * Servlet implementation class ContactInput
+ * Servlet implementation class ContactOutput
  */
-@WebServlet("/ContactInput")
-public class ContactInput extends HttpServlet {
+@WebServlet("/ContactOutput")
+public class ContactOutput extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public ContactInput() {
+    public ContactOutput() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -32,23 +32,25 @@ public class ContactInput extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 
+
 		request.setCharacterEncoding("UTF-8");
 		response.setCharacterEncoding("UTF-8");
 
+		//	リクエストパラメーターの取得
 		MemberRegist m = new MemberRegist();
+		m.setName((String)request.getParameter("name"));
+		m.setMail((String)request.getParameter("mail"));
+		m.getContact((String)request.getParameter("contact"));
 
-		//戻るボタンを押された時に送られてきた値を入れる
-		if(request.getParameter("state") != null){
-			m.setName((String)request.getParameter("name"));
-			m.setMail((String)request.getParameter("mail"));
-			m.setContact((String)request.getParameter("contact"));
+		//エラーがあれば入力画面に遷移する
+		String fileJsp = "/Output.jsp";
+		if(m.getJsp()){
+			fileJsp = "/Input.jsp";
 		}
 
 		request.setAttribute("MEMBER",m);
-		RequestDispatcher rd=request.getRequestDispatcher("/Input.jsp");
+		RequestDispatcher rd=request.getRequestDispatcher(fileJsp);
 		rd.forward(request, response);
-
-
 	}
 
 	/**

@@ -7,6 +7,7 @@ public class MemberRegist {
 	private String address;
 	private String telnumber;
 	private String card;
+	private String contact;
 
 	private String errorName;
 	private String errorMail;
@@ -14,6 +15,7 @@ public class MemberRegist {
 	private String errorAddress;
 	private String errorTelnumber;
 	private String errorCard;
+	private String errorContact;
 
 	public MemberRegist(){
 		this.name = "";
@@ -22,12 +24,14 @@ public class MemberRegist {
 		this.address = "";
 		this.telnumber = "";
 		this.card = "";
+		this.contact = "";
 		this.errorName = "";
 		this.errorMail = "";
 		this.errorPass = "";
 		this.errorAddress = "";
 		this.errorTelnumber = "";
 		this.errorCard = "";
+		this.errorContact = "";
 	}
 	public void setName(String val){
 		if(val.equals("")){
@@ -81,6 +85,12 @@ public class MemberRegist {
 		}
 		this.card = val;
 	}
+	public void setContact(String val){
+		if(val.equals("")){
+			this.errorCard = "お問合せ内容が未入力です。";
+		}
+		this.card = val;
+	}
 
 	public String getName(){
 			return this.name;
@@ -100,6 +110,9 @@ public class MemberRegist {
 	public String getCard(){
 		return this.card;
 	}
+	public String getContact(){
+		return this.contact;
+	}
 	public String errorName(){
 		return this.errorName;
 	}
@@ -112,12 +125,13 @@ public class MemberRegist {
 	public String errorAdoress(){
 		return this.errorAddress;
 	}
-
 	public String errorTelnumber(){
 		return this.errorTelnumber;
 	}
-
 	public String errorCard(){
 		return this.errorCard;
+	}
+	public String errorContact(){
+		return this.errorContact;
 	}
 }

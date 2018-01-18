@@ -1,3 +1,8 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@ page import = "ErrorCheck.MemberRegist" %>
+
+<% MemberRegist m = (MemberRegist)request.getAttribute("MEMBER"); %>
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -110,19 +115,22 @@
             <dl class="clearfix">
               <dt>お名前<span class="required">【必須】</span></dt>
               <dd>
-                <input name="name" type="text" class="txt" />
+                <input name="name" type="text" class="txt" value="<%=m.getName()%>"/>
+                <span class="error"><%=m.errorName() %></span>
               </dd>
             </dl>
             <dl class="clearfix">
               <dt>メールアドレス<span class="required">【必須】</span></dt>
               <dd>
-                <input name="mail" type="text" class="txt" />
+                <input name="mail" type="text" class="txt" value="<%=m.getMail()%>"/>
+                <span class="error"><%=m.errorMail() %></span>
               </dd>
             </dl>
             <dl class="clearfix">
               <dt>お問い合せ内容<span class="required">【必須】</span></dt>
               <dd>
-                <textarea name="contact" rows="5" ></textarea>
+                <textarea name="contact" rows="5" value="<%=m.getContact()%>"></textarea>
+                <span class="error"><%=m.errorContact() %></span>
               </dd>
             </dl>
             <p class="kakunin">
