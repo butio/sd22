@@ -108,7 +108,7 @@
       <section class="account">
         <div class="form">
           <h3>アカウントをお持ちの方</h3>
-          <form action="./logincomp.html" method="post" enctype="multipart/form-data">
+          <form action="./MemberLogin.java" method="post" enctype="multipart/form-data">
             <dl class="clearfix">
               <dt>メールアドレス<span class="required"></span></dt>
               <dd>

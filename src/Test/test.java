@@ -8,7 +8,6 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import Dao.Dao;
 import ErrorCheck.MemberRegist;
 /**
  * Servlet implementation class test
@@ -60,9 +59,8 @@ public class test extends HttpServlet {
 		System.out.println(m.errorTelnumber());
 		System.out.println(m.getCard());
 		System.out.println(m.errorCard());
-		
-		Dao = new Dao();
-		
+
+
 	}
 
 	/**
