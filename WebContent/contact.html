@@ -106,31 +106,23 @@
       <section>
         <div class="form">
           <p> 下記フォームをご入力の上、「確認画面へ」をクリックしてください。</p>
-          <form action="./contactconfirm.html" method="post" enctype="multipart/form-data">
-            <input type="hidden" name="need" value="お名前 email 会社名 メッセージ" />
-            <input type="hidden" name="match" value="email email2" />
+ 			<form action="./contact" method="get">
             <dl class="clearfix">
-              <dt>お名前（漢字）<span class="required">【必須】</span></dt>
+              <dt>お名前<span class="required">【必須】</span></dt>
               <dd>
-                <input name="お名前" type="text" class="txt" />
+                <input name="name" type="text" class="txt" />
               </dd>
             </dl>
             <dl class="clearfix">
               <dt>メールアドレス<span class="required">【必須】</span></dt>
               <dd>
-                <input name="お名前フリガナ" type="text" class="txt" />
-              </dd>
-            </dl>
-            <dl class="clearfix">
-              <dt>電話番号<span class="required">【必須】</span></dt>
-              <dd>
-                <input name="email" type="text" class="txt ina" />
+                <input name="mail" type="text" class="txt" />
               </dd>
             </dl>
             <dl class="clearfix">
               <dt>お問い合せ内容<span class="required">【必須】</span></dt>
               <dd>
-                <textarea name="お問い合せ内容" rows="5" ></textarea>
+                <textarea name="contact" rows="5" ></textarea>
               </dd>
             </dl>
             <p class="kakunin">
