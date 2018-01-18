@@ -110,33 +110,35 @@
       <hr>
       <section>
         <div class="form">
-          <p> 下記フォームをご入力の上、「確認画面へ」をクリックしてください。</p>
- 			<form action="./ContactOutput" method="get">
-            <dl class="clearfix">
-              <dt>お名前<span class="required">【必須】</span></dt>
-              <dd>
-                <input name="name" type="text" class="txt" value="<%=m.getName()%>"/>
-                <span class="error"><%=m.errorName() %></span>
-              </dd>
-            </dl>
-            <dl class="clearfix">
-              <dt>メールアドレス<span class="required">【必須】</span></dt>
-              <dd>
-                <input name="mail" type="text" class="txt" value="<%=m.getMail()%>"/>
-                <span class="error"><%=m.errorMail() %></span>
-              </dd>
-            </dl>
-            <dl class="clearfix">
-              <dt>お問い合せ内容<span class="required">【必須】</span></dt>
-              <dd>
-                <textarea name="contact" rows="5" value="<%=m.getContact()%>"></textarea>
-                <span class="error"><%=m.errorContact() %></span>
-              </dd>
-            </dl>
-            <p class="kakunin">
-              <input type="submit" value="確認画面へ" class="btn_submit">
-            </p>
-          </form>
+          <p> 下記フォームをご入力の上、「送信」をクリックしてください。</p>
+ 			<h1>入力確認画面</h1>
+				<ul class="form-style-1">
+
+    			<li>
+			    <label>名前 </label>
+			    	<%=m.getName() %>
+			    </li>
+
+			    <li>
+			        <label>メールアドレス </label>
+			        <%=m.getMail() %>
+			    </li>
+
+			    <li>
+			        <label>お問合せ内容 </label>
+			        <%=m.getContact() %>
+			    </li>
+
+			    <li>
+			    	<form action="./contact" method="get">
+			    	<input type="hidden" name="name" value="<%=m.getName() %>">
+			    	<input type="hidden" name="mail" value="<%=m.getMail() %>">
+			    	<input type="hidden" name="loginID" value="<%=m.getContact() %>">
+			    	<input type="hidden" name="state" value="back">
+					<input type="submit" value="戻る">
+			        </form>
+			    </li>
+			</ul>
         </div>
         <p>※上記フォームを利用するには <a href="http://www.sophia-it.com/content/CGI" target="_blank"> CGI </a> などのプログラムが必要です。</p>
         <p> <a href="http://cgi-design.net/" target="_blank"> CGI-design </a> </p>

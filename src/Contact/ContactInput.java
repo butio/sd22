@@ -45,7 +45,7 @@ public class ContactInput extends HttpServlet {
 		}
 
 		request.setAttribute("MEMBER",m);
-		RequestDispatcher rd=request.getRequestDispatcher("/Input.jsp");
+		RequestDispatcher rd=request.getRequestDispatcher("/contact.jsp");
 		rd.forward(request, response);
 
 

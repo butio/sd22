@@ -40,12 +40,12 @@ public class ContactOutput extends HttpServlet {
 		MemberRegist m = new MemberRegist();
 		m.setName((String)request.getParameter("name"));
 		m.setMail((String)request.getParameter("mail"));
-		m.getContact((String)request.getParameter("contact"));
+		m.setContact((String)request.getParameter("contact"));
 
 		//エラーがあれば入力画面に遷移する
-		String fileJsp = "/Output.jsp";
+		String fileJsp = "/contactResult.jsp";
 		if(m.getJsp()){
-			fileJsp = "/Input.jsp";
+			fileJsp = "/contact.jsp";
 		}
 
 		request.setAttribute("MEMBER",m);
