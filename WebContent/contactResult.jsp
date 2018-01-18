@@ -131,7 +131,7 @@
             </dl>
 
 			<div class="form_conf">
-			<form action="./PurchaseResultServlet" method="get">
+			<form action="./ContactRegist" method="get">
 			<p class="kakunin" >
 			<input type="submit" value="送信" class="btn_submit">
 			</p>
@@ -147,7 +147,6 @@
 			</p>
 			</form>
 			</div>
-
 
         </div>
         <p>※上記フォームを利用するには <a href="http://www.sophia-it.com/content/CGI" target="_blank"> CGI </a> などのプログラムが必要です。</p>
