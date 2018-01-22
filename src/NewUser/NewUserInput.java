@@ -10,7 +10,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import ErrorCheck.MemberRegist;
-
 /**
  * Servlet implementation class NewUserInput
  */
@@ -32,6 +31,7 @@ public class NewUserInput extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 
+
 		request.setCharacterEncoding("UTF-8");
 		response.setCharacterEncoding("UTF-8");
 
@@ -51,6 +51,7 @@ public class NewUserInput extends HttpServlet {
 		request.setAttribute("MEMBER",m);
 		RequestDispatcher rd=request.getRequestDispatcher("/newuser.jsp");
 		rd.forward(request, response);
+
 	}
 
 	/**

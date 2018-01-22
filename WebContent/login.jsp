@@ -126,9 +126,9 @@
             </p>
           </form>
       </section>
-      <section class="newuser.jsp">
+      <section class="newuser">
         <div class="form">
-          <form action="./newuser.jsp" method="post" enctype="multipart/form-data">
+          <form action="./NewUserInput" method="post" enctype="multipart/form-data">
             <h3>新規登録</h3>
             <dl class="clearfix">
               まさる堂での曲の購入・ダウンロードにはアカウント登録（無料）が必要となります。

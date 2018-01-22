@@ -51,16 +51,17 @@ public class NewUserOutput extends HttpServlet {
 
 		session.setAttribute("sessionName",m.getName());
 		session.setAttribute("sessionMail",m.getMail());
-		session.setAttribute("sessionNickname",m.getContact());
-		session.setAttribute("sessionPass",m.getName());
-		session.setAttribute("sessionAddress",m.getMail());
-		session.setAttribute("sessionContact",m.getContact());
+		session.setAttribute("sessionNickname",m.getNickname());
+		session.setAttribute("sessionPass",m.getPass());
+		session.setAttribute("sessionAdoress",m.getAdoress());
+		session.setAttribute("sessionTelnumber",m.getTelnumber());
+		session.setAttribute("sessionCard",m.getCard());
 
 
 		//エラーがあれば入力画面に遷移する
-		String fileJsp = "/contactResult.jsp";
+		String fileJsp = "/newuserResult.jsp";
 		if(m.getJsp()){
-			fileJsp = "/contact.jsp";
+			fileJsp = "/newuser.jsp";
 		}
 
 		request.setAttribute("MEMBER",m);

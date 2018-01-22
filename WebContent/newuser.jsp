@@ -110,7 +110,7 @@
       <section>
         <div class="form">
           <p> 下記フォームをご入力の上、「確認画面へ」をクリックしてください。</p>
-          <form action="./newuserconfirm.jsp" method="post" enctype="multipart/form-data">
+          <form action="./NewUserOutput" method="post" enctype="multipart/form-data">
             <dl class="clearfix">
               <dt>お名前（漢字）<span class="required">【必須】</span></dt>
               <dd>
