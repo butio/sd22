@@ -1,3 +1,9 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@ page import = "ErrorCheck.MemberRegist" %>
+
+
+<% MemberRegist m = (MemberRegist)request.getAttribute("MEMBER"); %>
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -19,17 +25,21 @@
 <![endif]-->
 </head>
 
+
 <body>
 <noscript>
 <p>※このページはJavaScriptを使用しています。JavaScript設定を有効にしてご覧ください。</p>
 </noscript>
 
+
 <!--ヘッダー-->
 <header class="header clearfix">
   <button type="button" id="toggleMenu" class="toggle_menu"> <i class="fa fa-bars"></i> </button>
 
+
   <!--ロゴ（ページ左上のサイト名）-->
   <h1><a href="index.html" title="ここにキーワードを含むページの見出しを記入">まさる堂</a></h1>
+
 
   <!--ページ右上の表示-->
   <div class="user info"><a href="user.html">
@@ -92,6 +102,7 @@
   </ul>
   <button id="collapse_menu" class="collapse_menu"> <i class="collapse_menu--icon  fa fa-fw"></i> <span class="collapse_menu--label">Recolher menu</span> </button>
 
+
   <!--ページ左下の表示-->
   <p class="copyright">Copyright(C) 2015<br>
     サイト名 All Rights Reserved.</p>
@@ -99,45 +110,57 @@
 <div class="wrapper">
   <div class="content">
 
+
     <!--ページのメイン部分-->
     <article>
-      <h2>Login</h2>
+      <h2>Contact</h2>
       <hr>
-      <section class="account">
+      <section>
         <div class="form">
-          <h3>アカウントをお持ちの方</h3>
-          <form action=".//MemberLogin"  method="post" enctype="multipart/form-data">
+          <p> 下記フォームを確認の上、「送信」をクリックしてください。</p>
+          <dl class="clearfix">
+              <dt>お名前<span class="required"></span></dt>
+              <dd>
+                <%=m.getName() %>
+              </dd>
+            </dl>
             <dl class="clearfix">
               <dt>メールアドレス<span class="required"></span></dt>
               <dd>
-                <input name="email" type="text" class="txt ina" />
+                <%=m.getMail() %>
               </dd>
             </dl>
             <dl class="clearfix">
-              <dt>パスワード<span class="required"></span></dt>
+              <dt>お問い合せ内容<span class="required"></span></dt>
               <dd>
-                <input name="email2" type="password" class="txt ina" />
+              <%=m.getContact() %>
               </dd>
             </dl>
-            <p class="kakunin">
-              <input type="submit" value="サインイン" class="btn_submit">
-            </p>
-          </form>
-      </section>
-      <section class="newuser">
-        <div class="form">
-          <form action="./newuser.html" method="post" enctype="multipart/form-data">
-            <h3>新規登録</h3>
-            <dl class="clearfix">
-              まさる堂での曲の購入・ダウンロードにはアカウント登録（無料）が必要となります。
-            </dl>
-            <dl class="clearfix">
-              メールアドレスのみ登録ができます。
-            </dl>
-            <p class="kakunin">
-              <input type="submit" value="新規登録[無料]" class="btn_submit">
-            </p>
-          </form>
+
+
+			<div class="form_conf">
+			<form action="./ContactRegist" method="get">
+			<p class="kakunin" >
+			<input type="submit" value="送信" class="btn_submit">
+			</p>
+			</form>
+
+
+			<form action="./ContactInput" method="get">
+			<input type="hidden" name="name" value="<%=m.getName() %>">
+			<input type="hidden" name="mail" value="<%=m.getMail() %>">
+			<input type="hidden" name="contact" value="<%=m.getContact() %>">
+			<input type="hidden" name="state" value="back">
+			<p class="kakunin" >
+			<input type="submit" value="戻る" class="btn_submit">
+			</p>
+			</form>
+			</div>
+
+
+        </div>
+        <p>※上記フォームを利用するには <a href="http://www.sophia-it.com/content/CGI" target="_blank"> CGI </a> などのプログラムが必要です。</p>
+        <p> <a href="http://cgi-design.net/" target="_blank"> CGI-design </a> </p>
       </section>
     </article>
 

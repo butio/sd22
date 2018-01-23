@@ -1,4 +1,6 @@
-<!DOCTYPE html>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html lang="ja">
 <head>
 <meta charset="utf-8" />
@@ -38,7 +40,7 @@
       <li>会員情報</li>
     </ul>
     </a></div>
-  <div class="login info"><a href="login.html">
+  <div class="login info"><a href="login.jsp">
     <ul>
       <li><i class="fa fa-sign-in fa-2x"></i> </li>
       <li>登録・ログイン</li>
@@ -106,17 +108,17 @@
       <section class="account">
         <div class="form">
           <h3>アカウントをお持ちの方</h3>
-          <form action=".//MemberLogin"  method="post" enctype="multipart/form-data">
+          <form action="./MemberLogin" method="get" >
             <dl class="clearfix">
               <dt>メールアドレス<span class="required"></span></dt>
               <dd>
-                <input name="email" type="text" class="txt ina" />
+                <input name="mail" type="text" class="txt ina" />
               </dd>
             </dl>
             <dl class="clearfix">
               <dt>パスワード<span class="required"></span></dt>
               <dd>
-                <input name="email2" type="password" class="txt ina" />
+                <input name="pass" type="password" class="txt ina" />
               </dd>
             </dl>
             <p class="kakunin">
@@ -126,7 +128,7 @@
       </section>
       <section class="newuser">
         <div class="form">
-          <form action="./newuser.html" method="post" enctype="multipart/form-data">
+          <form action="./NewUserInput" >
             <h3>新規登録</h3>
             <dl class="clearfix">
               まさる堂での曲の購入・ダウンロードにはアカウント登録（無料）が必要となります。
@@ -138,6 +140,7 @@
               <input type="submit" value="新規登録[無料]" class="btn_submit">
             </p>
           </form>
+          </div>
       </section>
     </article>
 
@@ -167,4 +170,3 @@
 <script src="js/scrolltopcontrol.js"></script> <!--スクロールしながらページのトップに戻る-->
 
 </body>
-</html>

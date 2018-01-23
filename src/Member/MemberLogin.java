@@ -1,3 +1,4 @@
+package Member;
 
 
 import java.io.IOException;
@@ -56,6 +57,7 @@ public class MemberLogin extends HttpServlet {
 		 try{
 			 dao = new Dao();
 			 rs = dao.execute("SELECT * FROM member");
+			 if(mail.equals("") && pass.equals("")){
 			 if(mail.equals(rs.getString("member.user_mail")) && pass.equals(rs.getString("member.user_pass"))){
 				 session.setAttribute("user_mail", mail);
 				 session.setAttribute("user_pass", pass);
@@ -63,6 +65,10 @@ public class MemberLogin extends HttpServlet {
 			 }else {
 				 String errormessage = "正しい情報を入力してください";
 			 }
+			 }else{
+				 String errormessage = "ログイン情報を入力してください";
+			 }
+
 	}catch(Exception e){
 
 	}finally{
