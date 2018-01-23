@@ -1,4 +1,6 @@
-<!DOCTYPE html>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html lang="ja">
 <head>
 <meta charset="utf-8" />
@@ -44,7 +46,7 @@
       <li>登録・ログイン</li>
     </ul>
     </a></div>
-    <div class="cart info"><a href="cart.html">
+    <div class="cart info"><a href="cart.jsp">
       <ul>
         <li><i class="fa fa-shopping-cart fa-2x"></i></li>
         <li>カート</li>
@@ -115,6 +117,8 @@
           <li>text......</li>
           </ul>
             <form action="./downroad.html" method="post" enctype="multipart/form-data">
+            <input type="hidden" name="album_id" value="">
+			<input type="hidden" name="album_count" value="">
             <input type="submit" value="購入する" class="btn_submit">
             </form>
         <hr>
