@@ -104,88 +104,43 @@
       <h2>Help</h2>
       <hr>
       <section>
-        <div class="form">
-          <p> 下記フォームをご入力の上、「確認画面へ」をクリックしてください。</p>
-          <form action="./clipmail.cgi" method="post" enctype="multipart/form-data">
-            <input type="hidden" name="need" value="お名前 email 会社名 メッセージ" />
-            <input type="hidden" name="match" value="email email2" />
-            <dl class="clearfix">
-              <dt>お名前（漢字）<span class="required">【必須】</span></dt>
-              <dd>
-                <input name="お名前" type="text" class="txt" />
-              </dd>
-            </dl>
-            <dl class="clearfix">
-              <dt>フリガナ（カタカナ）<span class="required">【必須】</span></dt>
-              <dd>
-                <input name="お名前フリガナ" type="text" class="txt" />
-              </dd>
-            </dl>
-            <dl class="clearfix">
-              <dt>メールアドレス<span class="required">【必須】</span></dt>
-              <dd>
-                <input name="email" type="text" class="txt ina" />
-              </dd>
-            </dl>
-            <dl class="clearfix">
-              <dt>メールアドレス再入力<span class="required">【必須】</span></dt>
-              <dd>
-                <input name="email2" type="text" class="txt ina" />
-              </dd>
-            </dl>
-            <dl class="clearfix">
-              <dt>チェックボックス</dt>
-              <dd>
-                <ul class="chra">
-                  <li>
-                    <input type="checkbox" name="チェックボックス" value="チェック1" />
-                    チェック1
-                  <li>
-                    <input type="checkbox" name="チェックボックス" value="チェック2" />
-                    チェック2
-                  <li>
-                    <input type="checkbox" name="チェックボックス" value="チェック3" />
-                    チェック3
-                </ul>
-              </dd>
-            </dl>
-            <dl class="clearfix">
-              <dt>ラジオボタン</dt>
-              <dd>
-                <ul class="chra">
-                  <li>
-                    <input type="radio" name="ラジオボタン" value="ボタン1" />
-                    ボタン1
-                  <li>
-                    <input type="radio" name="ラジオボタン" value="ボタン2" />
-                    ボタン2
-                  <li>
-                    <input type="radio" name="ラジオボタン" value="ボタン3" />
-                    ボタン3
-                </ul>
-              </dd>
-            </dl>
-            <dl class="clearfix">
-              <dt>セレクトボックス</dt>
-              <dd>
-                <select class="ctSelect">
-                  <option value="セレクトボックスA">セレクトボックスA</option>
-                  <option value="セレクトボックスB">セレクトボックスB</option>
-                  <option value="セレクトボックスC">セレクトボックスC</option>
-                </select>
-              </dd>
-            </dl>
-            <dl class="clearfix">
-              <dt>お問い合せ内容<span class="required">【必須】</span></dt>
-              <dd>
-                <textarea name="お問い合せ内容" rows="5" ></textarea>
-              </dd>
-            </dl>
-            <p class="kakunin">
-              <input type="submit" value="確認画面へ" class="btn_submit">
-            </p>
-          </form>
-        </div>
+        <p class="help2">よくあるお問い合わせ</p>
+        <ul id="navi">
+          <li><a href="#">アカウントについて</a></li>
+          <li><a href="#">購入・決済について</a></li>
+          <li><a href="#">ダウンロードについて</a></li>
+          <li><a href="#">その他</a></li>
+        </ul>
+        <ul id="navig">
+          <li><a href="#">新規登録でない</a></li>
+          <li><a href="#">メールが届かない</a></li>
+          <li><a href="#">メールアドレス/パスワード変更</a></li>
+          <li><a href="#">メールアドレス/パスワード忘れ</a></li>
+          <li><a href="#">配信設定</a></li>
+        </ul>
+        <ul id="navig">
+          <li><a href="#">まさる堂でのお支払方法</a></li>
+          <li><a href="#">サービスについて</a></li>
+          <li><a href="#">テキスト..</a></li>
+          <li><a href="#">テキスト..</a></li>
+          <li><a href="#">テキスト..</a></li>
+        </ul>
+        <ul id="navig">
+          <li><a href="#">ダウンロードできない</a></li>
+          <li><a href="#">ダウンロードの保存先</a></li>
+          <li><a href="#">テキスト..</a></li>
+          <li><a href="#">購入履歴</a></li>
+          <li><a href="#">バックアップ方法</a></li>
+        </ul>
+        <ul id="navig">
+          <li><a href="#">視聴したい/視聴できない</a></li>
+          <li><a href="#">同じ画面に戻る</a></li>
+          <li><a href="#">再生方法が分からない</a></li>
+          <li><a href="#">テキスト..</a></li>
+          <li><a href="#">テキスト..</a></li>
+        </ul>
+
+
         <p>※上記フォームを利用するには <a href="http://www.sophia-it.com/content/CGI" target="_blank"> CGI </a> などのプログラムが必要です。</p>
         <p> <a href="http://cgi-design.net/" target="_blank"> CGI-design </a> </p>
       </section>
