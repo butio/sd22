@@ -231,6 +231,70 @@ section {
   font-size:20px;
   width:100%;
 }
+ol,ul{
+	list-style: none;
+}
+.syosai{
+  clear: both;
+}
+td p {
+  font-size: 15px;
+}
+#nav li{
+	width:98%;
+
+	margin-top:5px;
+	margin-bottom:5px;
+
+	margin-left:10px;
+	background-color:#77FFAA;
+	text-align:center;
+}
+#navi li{
+	float:left;
+	width:218px;
+  text-align: center;
+
+	margin-top:5px;
+	margin-bottom:5px;
+
+	margin-left:10px;
+	background-color:gray;
+}
+#navig{
+  float:left;
+	width:218px;
+  text-align: center;
+
+	margin-top:5px;
+	margin-bottom:5px;
+
+	margin-left:10px;
+  font-size: 10px;
+}
+#form01{
+    background-color: white;
+    width:200px;
+    height: 20px;
+    border: 1px green solid;
+}
+#form01 input{
+    vertical-align: top;
+    margin: 0px;
+    height: 100%;
+    box-sizing: border-box;
+    background-color: transparent;
+}
+#input01{
+    width: 150px;
+    border: none;
+    border-right: 1px green solid;
+}
+#submit01{
+    width: 50px;
+    border: none;
+}
+
 article h2 {
     font-size: 3em; /*フォントサイズ指定(emはフォントの高さを１とした相対指定)*/
     font-weight: normal; /*フォントの太さ指定(normalは標準)*/
@@ -252,7 +316,16 @@ article li, p {
 .terms_content li li {
     font-size: 100%; /*フォントサイズ指定(emはフォントの高さを１とした相対指定)*/
 }
+.box{
+  float: left;
+}
+.single{
+  clear: both;
 
+}
+.album{
+  clear: both;
+}
 /* ----- テーブル設定 ----- */
 
 .ta {
@@ -271,14 +344,6 @@ article li, p {
 }
 
 /* ----- フォーム設定 ----- */
-
-.form_conf {
-    text-align: center;
-}
-.form_conf form {
-    display: inline-block;
-    margin: 0 10px;
-}
 
 .clearfix:after {
     clear: both; /*floatの回り込み解除*/
@@ -398,6 +463,18 @@ article li, p {
 .required {
     color: #ff0000; /*文字色指定*/
 }
+.title{
+  font-size: 15px;
+}
+.photo{
+  text-align: center;
+}
+.box {
+	float: left;
+}
+.singlebox {
+	overflow: hidden;
+}
 
 /*map設定*/
 
@@ -446,7 +523,23 @@ article li, p {
     filter: alpha(opacity=60);
     -moz-opacity: 0.6; /*ここまで透明度設定*/
 }
-
+.mo{
+  font-size: 25px;
+}
+.a{
+  float: left;
+  clear: both;
+}
+.uver{
+  font-size: 22px;
+}
+.help2{
+  font-size: 22px;
+  text-align: center;
+}
+.help3 li{
+  font-size: 15px;
+}
 /*レスポンシブ設定*/
 
 @media screen and (max-width: 768px) {
