@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+CTYPE html>
 <html lang="ja">
 <head>
 <meta charset="utf-8" />
@@ -12,7 +12,6 @@
 <link href='https://fonts.googleapis.com/css?family=Berkshire+Swash|Lobster' rel='stylesheet' type='text/css'><!--googlewebフォント-->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"><!--アイコンwebフォント-->
 <link rel="stylesheet" href="css/vertical-responsive-menu.css" /><!--レスポンシブメニュー-->
-<link rel="stylesheet" href="css/grey.css"><!--セレクトメニューの装飾-->
 <!--[if lt IE 9]>
 <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
@@ -101,43 +100,20 @@
 
     <!--ページのメイン部分-->
     <article>
-      <h2>Login</h2>
+      <h2>Cart</h2>
       <hr>
-      <section class="account">
-        <div class="form">
-          <h3>アカウントをお持ちの方</h3>
-          <form action="./logincomp.html" method="post" enctype="multipart/form-data">
-            <dl class="clearfix">
-              <dt>メールアドレス<span class="required"></span></dt>
-              <dd>
-                <input name="email" type="text" class="txt ina" />
-              </dd>
-            </dl>
-            <dl class="clearfix">
-              <dt>パスワード<span class="required"></span></dt>
-              <dd>
-                <input name="email2" type="password" class="txt ina" />
-              </dd>
-            </dl>
-            <p class="kakunin">
-              <input type="submit" value="サインイン" class="btn_submit">
-            </p>
-          </form>
-      </section>
-      <section class="newuser">
-        <div class="form">
-          <form action="./newuser.html" method="post" enctype="multipart/form-data">
-            <h3>新規登録</h3>
-            <dl class="clearfix">
-              まさる堂での曲の購入・ダウンロードにはアカウント登録（無料）が必要となります。
-            </dl>
-            <dl class="clearfix">
-              メールアドレスのみ登録ができます。
-            </dl>
-            <p class="kakunin">
-              <input type="submit" value="新規登録[無料]" class="btn_submit">
-            </p>
-          </form>
+      <section>
+        <table class="ta">
+          <tr>
+            <td>〒123-4567&nbsp;&nbsp;東京都 xxx xxxx xx-xx</td>
+          </tr>
+          <tr>
+            <td>Tel : 012-3456-7890&nbsp;&nbsp;Fax : 012-3456-7890</td>
+          </tr>
+        </table><br>
+        <div class="gmap">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9895.699811388999!2d139.7671246071058!3d35.67998613686348!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188bfbd89f700b%3A0x443025838b0ce6c6!2z5p2x5Lqs6aeF!5e0!3m2!1sja!2sjp!4v1442905547216" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+        </div>
       </section>
     </article>
 
@@ -147,23 +123,8 @@
 </div>
 
 <!--javascript設定-->
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script> <!--googleのCDN（ネットワーク経由でコンテンツを提供するサービス）よりjqueryをロード-->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script> <!--googleのCDN（ネットワーク経由でコンテンツを提供するサービス）よりjqueryをロード-->
 <script src="js/vertical-responsive-menu.min.js" ></script> <!--レスポンシブメニュー-->
-<script src="js/icheck.min.js"></script> <!--チェックボックスやラジオボタンの装飾-->
-<script>
- $(function() {
-     $('input').iCheck({
-         checkboxClass: 'icheckbox_minimal-grey',
-         radioClass: 'iradio_minimal-grey',
-     });
- });
-</script>
-<script src="js/jquery.customSelect.min.js"></script> <!--セレクトメニューの装飾-->
-<script>
- $(function() {
-     $('.ctSelect').customSelect()
- });
-</script>
 <script src="js/scrolltopcontrol.js"></script> <!--スクロールしながらページのトップに戻る-->
 
 </body>
