@@ -51,10 +51,10 @@ public class MemberRegist {
 	}
 	public void setNickname(String val){
 		if(val.equals("")){
-			this.errorName = "ニックネームが未入力です。";
+			this.errorNickname = "ニックネームが未入力です。";
 			this.errFlg = true;
 		}else if(!ErrorCheck.isLength(1, 15, val)){
-			this.errorName = "1から15文字の間で入力してください。";
+			this.errorNickname = "1から15文字の間で入力してください。";
 			this.errFlg = true;
 		}
 		this.nickname = val;
