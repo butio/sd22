@@ -33,7 +33,6 @@ public class NewUserOutput extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 
-
 		request.setCharacterEncoding("UTF-8");
 		response.setCharacterEncoding("UTF-8");
 
@@ -49,6 +48,12 @@ public class NewUserOutput extends HttpServlet {
 		m.setTelnumber((String)request.getParameter("telnumber"));
 		m.setCard((String)request.getParameter("card"));
 
+		//エラーがあれば入力画面に遷移する
+		String fileJsp = "/newuserResult.jsp";
+		if(m.getJsp()){
+			fileJsp = "/newuser.jsp";
+		}
+
 		session.setAttribute("sessionName",m.getName());
 		session.setAttribute("sessionMail",m.getMail());
 		session.setAttribute("sessionNickname",m.getNickname());
@@ -56,13 +61,6 @@ public class NewUserOutput extends HttpServlet {
 		session.setAttribute("sessionAdoress",m.getAdoress());
 		session.setAttribute("sessionTelnumber",m.getTelnumber());
 		session.setAttribute("sessionCard",m.getCard());
-
-
-		//エラーがあれば入力画面に遷移する
-		String fileJsp = "/newuserResult.jsp";
-		if(m.getJsp()){
-			fileJsp = "/newuser.jsp";
-		}
 
 		request.setAttribute("MEMBER",m);
 		RequestDispatcher rd=request.getRequestDispatcher(fileJsp);

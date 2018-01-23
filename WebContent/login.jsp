@@ -128,7 +128,7 @@
       </section>
       <section class="newuser">
         <div class="form">
-          <form action="./NewUserInput" method="post" enctype="multipart/form-data">
+          <form action="./NewUserInput" >
             <h3>新規登録</h3>
             <dl class="clearfix">
               まさる堂での曲の購入・ダウンロードにはアカウント登録（無料）が必要となります。
@@ -140,6 +140,7 @@
               <input type="submit" value="新規登録[無料]" class="btn_submit">
             </p>
           </form>
+          </div>
       </section>
     </article>
 

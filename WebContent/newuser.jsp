@@ -115,42 +115,49 @@
               <dt>お名前（漢字）<span class="required">【必須】</span></dt>
               <dd>
                 <input name="name" type="text" class="txt" value="<%=m.getName()%>"/>
+                                <span class="error"><%=m.errorName() %></span>
               </dd>
             </dl>
             <dl class="clearfix">
               <dt>ニックネーム<span class="required">【必須】</span></dt>
               <dd>
                 <input name="nickname" type="text" class="txt" value="<%=m.getNickname()%>"/>
+                                <span class="error"><%=m.errorNickname() %></span>
               </dd>
             </dl>
             <dl class="clearfix">
               <dt>メールアドレス<span class="required">【必須】</span></dt>
               <dd>
-                <input name="email" type="text" class="txt ina" value="<%=m.getMail()%>"/>
+                <input name="mail" type="text" class="txt ina" value="<%=m.getMail()%>"/>
+                                <span class="error"><%=m.errorMail() %></span>
               </dd>
             </dl>
             <dl class="clearfix">
               <dt>パスワード<span class="required">【必須】</span></dt>
               <dd>
                 <input name="pass" type="text" class="txt ina" value="<%=m.getPass()%>"/>
+                                <span class="error"><%=m.errorPass() %></span>
               </dd>
             </dl>
             <dl class="clearfix">
               <dt>住所<span class="required">【必須】</span></dt>
               <dd>
                 <input name="address" type="text" class="txt ina" value="<%=m.getAdoress()%>"/>
+                                <span class="error"><%=m.errorAdoress() %></span>
               </dd>
             </dl>
             <dl class="clearfix">
               <dt>電話番号<span class="required">【必須】</span></dt>
               <dd>
-                <input name="tell" type="text" class="txt ina" value="<%=m.getTelnumber()%>"/>
+                <input name="telnumber" type="text" class="txt ina" value="<%=m.getTelnumber()%>"/>
+                                <span class="error"><%=m.errorTelnumber() %></span>
               </dd>
             </dl>
             <dl class="clearfix">
               <dt>クレジットカード<span class="required">【必須】</span></dt>
               <dd>
                 <input name="card" type="text" class="txt ina" value="<%=m.getCard()%>"/>
+                                <span class="error"><%=m.errorCard() %></span>
               </dd>
             </dl>
             <p class="kakunin">
