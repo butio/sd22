@@ -1,7 +1,8 @@
-CTYPE html>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html lang="ja">
 <head>
-<meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 <title>ここにキーワードを含むページのタイトルを記入</title>
 <meta name="Description" content="ここにキーワードを含むページの説明文を記入" />
@@ -102,19 +103,7 @@ CTYPE html>
     <article>
       <h2>Cart</h2>
       <hr>
-      <section>
-        <table class="ta">
-          <tr>
-            <td>〒123-4567&nbsp;&nbsp;東京都 xxx xxxx xx-xx</td>
-          </tr>
-          <tr>
-            <td>Tel : 012-3456-7890&nbsp;&nbsp;Fax : 012-3456-7890</td>
-          </tr>
-        </table><br>
-        <div class="gmap">
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9895.699811388999!2d139.7671246071058!3d35.67998613686348!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188bfbd89f700b%3A0x443025838b0ce6c6!2z5p2x5Lqs6aeF!5e0!3m2!1sja!2sjp!4v1442905547216" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
-        </div>
-      </section>
+
     </article>
 
     <!-- / .content -->
