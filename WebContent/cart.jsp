@@ -124,6 +124,9 @@ System.out.println(aryTable.get(0));
 </tr>
 <%} %>
 </table>
+            <form action="./MusicPurchaseServlet" method="get" enctype="multipart/form-data">
+            <input type="submit" value="購入する" class="btn_submit">
+            </form>
     </article>
 
     <!-- / .content -->

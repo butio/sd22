@@ -119,7 +119,7 @@
             <form action="./MusicCartServlet" method="get" enctype="multipart/form-data">
             <input type="hidden" name="album_id" value="31">
 			<input type="hidden" name="album_count" value="0">
-            <input type="submit" value="購入する" class="btn_submit">
+            <input type="submit" value="カートに入れる" class="btn_submit">
             </form>
         <hr>
         <div id ="music">
