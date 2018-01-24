@@ -113,18 +113,18 @@ ArrayList<String> result = (ArrayList<String>) request.getAttribute("RESULT");
     <!--ページのメイン部分-->
     <article>
       <h2>検索結果</h2>
+<hr>
       <section>
-
 
     <% for(String data : result){ %>
 	<p><%=data %></p>
 	<% } %>
 
       </section>
-
+<center>
         <p>※上記フォームを利用するには <a href="http://www.sophia-it.com/content/CGI" target="_blank"> CGI </a> などのプログラムが必要です。</p>
         <p> <a href="http://cgi-design.net/" target="_blank"> CGI-design </a> </p>
-      </section>
+</center>
     </article>
 
     <!-- / .content -->

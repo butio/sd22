@@ -103,6 +103,7 @@
     <!--ページのメイン部分-->
     <article>
       <h2>楽曲検索</h2>
+<hr>
       <section>
         <div class="form">
           <form action="./SearchServlet" method="get">
@@ -117,9 +118,10 @@
           </form>
 
       </section>
-
+<center>
         <p>※上記フォームを利用するには <a href="http://www.sophia-it.com/content/CGI" target="_blank"> CGI </a> などのプログラムが必要です。</p>
         <p> <a href="http://cgi-design.net/" target="_blank"> CGI-design </a> </p>
+</center>
       </section>
     </article>
 
