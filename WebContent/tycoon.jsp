@@ -117,8 +117,8 @@
           <li>text......</li>
           </ul>
             <form action="./downroad.html" method="post" enctype="multipart/form-data">
-            <input type="hidden" name="album_id" value="">
-			<input type="hidden" name="album_count" value="">
+            <input type="hidden" name="album_id" value="31">
+			<input type="hidden" name="album_count" value="*">
             <input type="submit" value="購入する" class="btn_submit">
             </form>
         <hr>
