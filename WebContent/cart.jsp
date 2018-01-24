@@ -108,6 +108,7 @@ System.out.println(aryTable.get(0));
     <article>
       <h2>Cart</h2>
       <hr>
+
 <table border=1>
 <tr>
 	<td>アルバム番号</td>

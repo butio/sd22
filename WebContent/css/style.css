@@ -445,7 +445,27 @@ article li, p {
     font-size: 100%; /* フォントサイズ指定(%はブラウザに設定した標準文字サイズ(通常16px)に対する値)*/
     font-weight: bold; /*フォントの太さ指定(normalは標準)*/
 }
-
+.bttn_submit {
+    width: 110px; /*幅指定(100%は画面横幅いっぱいに表示)*/
+    height:30px;
+    border: solid 1px #001a9b; /*境界線指定*/
+    /*角丸指定*/
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px; /*ここまで角丸指定*/
+    /*背景グラデーション指定*/
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0.00, #0036ff), color-stop(1.00, #001a9b));
+    background: -webkit-linear-gradient(#0036ff, #001a9b);
+    background: -moz-linear-gradient(#0036ff, #001a9b);
+    background: -o-linear-gradient(#0036ff, #001a9b);
+    background: -ms-linear-gradient(#0036ff, #001a9b);
+    background: linear-gradient(#0036ff, #001a9b); /*ここまで背景グラデーション指定*/
+    color: #fff; /*文字色指定*/
+    text-align: center; /*行の水平方向の揃え方(centerは中央揃え)*/
+    font-size: 80%; /* フォントサイズ指定(%はブラウザに設定した標準文字サイズ(通常16px)に対する値)*/
+    font-weight: bold; /*フォントの太さ指定(normalは標準)*/
+    float:right;
+}
 .btn_submit:hover {
     /*透明度設定*/
     opacity: 0.8;
@@ -459,7 +479,6 @@ article li, p {
     transition: 0.5s; /*ここまで時間的変化指定*/
     cursor: pointer; /*マウスカーソルの形状指定(pointerはリンクカーソル)*/
 }
-
 .required {
     color: #ff0000; /*文字色指定*/
 }

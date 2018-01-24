@@ -124,10 +124,24 @@
         <hr>
         <div id ="music">
         <p>収録曲</p>
-        <p>1 TYCOON</p><p>2 Q.E.D</p><p>3 シリウス</p><p>4 SHOUT LOVE</p><p>5 IDEAL REALITY</p>
-        <p>6 LONE WOLF</p><p>7 DECIDED</p><p>8 PLAYING RUN</p><p>9 ALL ALONE</p><p>10 一滴の影響</p>
-        <p>11 ほんの少し</p><p>12 僕の言葉ではない これは僕たちの言葉</p><p>13 WE ARE GO</p><p>14 Collide</p>
-        <p>15 奏全域</p><p>16 I LOVE THE WORLD</p><p>17 エミュー</p><p>18 終焉</p>
+        <p>1 TYCOON<input type="submit" value="カートに入れる" class="bttn_submit"></p><hr>
+        <p>2 Q.E.D<input type="submit" value="カートに入れる" class="bttn_submit"></p><hr>
+        <p>3 シリウス<input type="submit" value="カートに入れる" class="bttn_submit"></p><hr>
+        <p>4 SHOUT LOVE<input type="submit" value="カートに入れる" class="bttn_submit"></p><hr>
+        <p>5 IDEAL REALITY<input type="submit" value="カートに入れる" class="bttn_submit"></p><hr>
+        <p>6 LONE WOLF<input type="submit" value="カートに入れる" class="bttn_submit"></p><hr>
+        <p>7 DECIDED<input type="submit" value="カートに入れる" class="bttn_submit"></p><hr>
+        <p>8 PLAYING RUN<input type="submit" value="カートに入れる" class="bttn_submit"></p><hr>
+        <p>9 ALL ALONE<input type="submit" value="カートに入れる" class="bttn_submit"></p><hr>
+        <p>10 一滴の影響<input type="submit" value="カートに入れる" class="bttn_submit"></p><hr>
+        <p>11 ほんの少し<input type="submit" value="カートに入れる" class="bttn_submit"></p><hr>
+        <p>12 僕の言葉ではない これは僕たちの言葉<input type="submit" value="カートに入れる" class="bttn_submit"></p><hr>
+        <p>13 WE ARE GO<input type="submit" value="カートに入れる" class="bttn_submit"></p><hr>
+        <p>14 Collide<input type="submit" value="カートに入れる" class="bttn_submit"></p><hr>
+        <p>15 奏全域<input type="submit" value="カートに入れる" class="bttn_submit"></p><hr>
+        <p>16 I LOVE THE WORLD<input type="submit" value="カートに入れる" class="bttn_submit"></p><hr>
+        <p>17 エミュー<input type="submit" value="カートに入れる" class="bttn_submit"></p><hr>
+        <p>18 終焉<input type="submit" value="カートに入れる" class="bttn_submit"></p><hr>
 
         <p>※上記フォームを利用するには <a href="http://www.sophia-it.com/content/CGI" target="_blank"> CGI </a> などのプログラムが必要です。</p>
         <p> <a href="http://cgi-design.net/" target="_blank"> CGI-design </a> </p>
