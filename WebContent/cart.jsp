@@ -1,5 +1,10 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+    <%@ page import="java.util.ArrayList" %>
+<%
+ArrayList<ArrayList<String>>aryTable=(ArrayList<ArrayList<String>>) request.getAttribute("MSL");
+System.out.println(aryTable.get(0));
+%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html lang="ja">
 <head>
@@ -103,7 +108,22 @@
     <article>
       <h2>Cart</h2>
       <hr>
-
+<table border=1>
+<tr>
+	<td>アルバム番号</td>
+	<td>アルバムカウント</td>
+	<td>曲名</td>
+	<td>価格</td>
+	<td>リリース年</td>
+</tr>
+<%for(ArrayList<String>rec:aryTable){ %>
+<tr>
+	<%for(String date:rec){ %>
+	<td><%=date %></td>
+	<%} %>
+</tr>
+<%} %>
+</table>
     </article>
 
     <!-- / .content -->
