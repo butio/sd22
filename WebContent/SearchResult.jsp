@@ -1,3 +1,15 @@
+
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@ page import="java.util.ArrayList" %>
+
+<%
+
+ArrayList<String> result = (ArrayList<String>) request.getAttribute("RESULT");
+
+
+%>
+
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -21,16 +33,15 @@
 
 <body>
 <noscript>
-<p>※このページはJavaScriptを使用しています。JavaScript設定を有効にしてご覧ください</p>
+<p>※このページはJavaScriptを使用しています。JavaScript設定を有効にしてご覧ください。</p>
 </noscript>
 
 <!--ヘッダー-->
 <header class="header clearfix">
-  <button type="button" id="toggleMenu" class="toggle_menu"> <i class="fa fa-bars"></i></button>
+  <button type="button" id="toggleMenu" class="toggle_menu"> <i class="fa fa-bars"></i> </button>
 
   <!--ロゴ（ページ左上のサイト名）-->
   <h1><a href="index.html" title="まさる堂">まさる堂</a></h1>
-
   <!--ページ右上の表示-->
     <div class="user info"><a href="user.html">
       <ul>
@@ -91,7 +102,7 @@
         <li class="sub_menu--item"> <a href="Access.html" class="sub_menu--link">Access</a></li>
       </ul>
     </ul>
-  <button id="collapse_menu" class="collapse_menu"><i class="collapse_menu--icon  fa fa-fw"></i> <span class="collapse_menu--label">Recolher menu</span> </button>
+  <button id="collapse_menu" class="collapse_menu"> <i class="collapse_menu--icon  fa fa-fw"></i> <span class="collapse_menu--label">Recolher menu</span> </button>
   <!--ページ左下の表示-->
   <p class="copyright">Copyright(C) 2015<br>
     サイト名 All Rights Reserved.</p>
@@ -101,19 +112,18 @@
 
     <!--ページのメイン部分-->
     <article>
-      <h2>まさる堂Gallery</h2>
-      <hr>
+      <h2>検索結果</h2>
       <section>
-        <div class="form">
-          <img src="images/Gallery1.jpg" alt="ギャラリー" />
-          <div class="Gallery1"><img src="images/Gallery2.jpg." alt="ギャラリー"/></div>
-          <img src="images/Gallery3.jpg" alt="ギャラリー" />
-          <div class="Gallery2"><img src="images/Gallery4.jpg." alt="ギャラリー" /></div>
-          <img src="images/Gallery5.jpg" alt="ギャラリー" />
-          <div class="Gallery3"><img src="images/Gallery6.jpg." alt="ギャラリー" /></div>
-          <img src="images/Gallery7.jpg" alt="ギャラリー" />
-          <div class="Gallery4"><img src="images/Gallery8.jpg." alt="ギャラリー" /></div>
-        </div>
+
+
+    <% for(String data : result){ %>
+	<p><%=data %></p>
+	<% } %>
+
+      </section>
+
+        <p>※上記フォームを利用するには <a href="http://www.sophia-it.com/content/CGI" target="_blank"> CGI </a> などのプログラムが必要です。</p>
+        <p> <a href="http://cgi-design.net/" target="_blank"> CGI-design </a> </p>
       </section>
     </article>
 
@@ -140,5 +150,6 @@
  });
 </script>
 <script src="js/scrolltopcontrol.js"></script> <!--スクロールしながらページのトップに戻る-->
+
 </body>
 </html>

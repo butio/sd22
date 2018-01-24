@@ -108,7 +108,7 @@ System.out.println(aryTable.get(0));
     <article>
       <h2>Cart</h2>
       <hr>
-
+<center>
 <table border=1>
 <tr>
 	<td>アルバム番号</td>
@@ -128,8 +128,8 @@ System.out.println(aryTable.get(0));
             <form action="./MusicPurchaseServlet" method="get" enctype="multipart/form-data">
             <input type="submit" value="購入する" class="btn_submit">
             </form>
+</center>
     </article>
-
     <!-- / .content -->
   </div>
   <!-- / .wrapper -->
