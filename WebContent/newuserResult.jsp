@@ -1,6 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<%@ page import = "ErrorCheck.MemberRegist" %>
+
+<% MemberRegist m = (MemberRegist)request.getAttribute("MEMBER"); %>
+<!DOCTYPE html>
 <html lang="ja">
 <head>
 <meta charset="utf-8" />
@@ -103,44 +106,85 @@
 
     <!--ページのメイン部分-->
     <article>
-      <h2>Login</h2>
+      <h2>Contact</h2>
       <hr>
-      <section class="account">
+      <section>
         <div class="form">
-          <h3>アカウントをお持ちの方</h3>
-          <form action="./UserLogin" method="get" >
+          <p> 下記フォームを確認の上、「送信」をクリックしてください。</p>
+          <dl class="clearfix">
+              <dt>お名前<span class="required"></span></dt>
+              <dd>
+                <%=m.getName() %>
+              </dd>
+            </dl>
+
+            <dl class="clearfix">
+              <dt>ニックネーム<span class="required"></span></dt>
+              <dd>
+                <%=m.getNickname()%>
+              </dd>
+            </dl>
+
             <dl class="clearfix">
               <dt>メールアドレス<span class="required"></span></dt>
               <dd>
-                <input name="mail" type="text" class="txt ina" />
+              <%=m.getMail() %>
               </dd>
             </dl>
+
             <dl class="clearfix">
               <dt>パスワード<span class="required"></span></dt>
               <dd>
-                <input name="pass" type="password" class="txt ina" />
+                <%=m.getPass() %>
               </dd>
             </dl>
-            <p class="kakunin">
-              <input type="submit" value="サインイン" class="btn_submit">
-            </p>
-          </form>
-      </section>
-      <section class="newuser">
-        <div class="form">
-          <form action="./NewUserInput" >
-            <h3>新規登録</h3>
+
             <dl class="clearfix">
-              まさる堂での曲の購入・ダウンロードにはアカウント登録（無料）が必要となります。
+              <dt>住所<span class="required"></span></dt>
+              <dd>
+                <%=m.getAdoress() %>
+              </dd>
             </dl>
+
             <dl class="clearfix">
-              メールアドレスのみ登録ができます。
+              <dt>電話番号<span class="required"></span></dt>
+              <dd>
+              <%=m.getTelnumber() %>
+              </dd>
             </dl>
-            <p class="kakunin">
-              <input type="submit" value="新規登録[無料]" class="btn_submit">
-            </p>
-          </form>
-          </div>
+
+             <dl class="clearfix">
+              <dt>カード番号<span class="required"></span></dt>
+              <dd>
+              <%=m.getCard() %>
+              </dd>
+            </dl>
+
+			<div class="form_conf">
+			<form action="./NewUserRegist" method="get">
+			<p class="kakunin" >
+			<input type="submit" value="送信" class="btn_submit">
+			</p>
+			</form>
+
+			<form action="./ContactInput" method="get">
+			<input type="hidden" name="name" value="<%=m.getName() %>">
+			<input type="hidden" name="mail" value="<%=m.getMail() %>">
+			<input type="hidden" name="nickname" value="<%=m.getNickname() %>">
+			<input type="hidden" name="pass" value="<%=m.getPass() %>">
+			<input type="hidden" name="address" value="<%=m.getAdoress() %>">
+			<input type="hidden" name="telnumber" value="<%=m.getTelnumber() %>">
+			<input type="hidden" name="card" value="<%=m.getCard() %>">
+			<input type="hidden" name="state" value="back">
+			<p class="kakunin" >
+			<input type="submit" value="戻る" class="btn_submit">
+			</p>
+			</form>
+			</div>
+
+        </div>
+        <p>※上記フォームを利用するには <a href="http://www.sophia-it.com/content/CGI" target="_blank"> CGI </a> などのプログラムが必要です。</p>
+        <p> <a href="http://cgi-design.net/" target="_blank"> CGI-design </a> </p>
       </section>
     </article>
 
@@ -170,3 +214,4 @@
 <script src="js/scrolltopcontrol.js"></script> <!--スクロールしながらページのトップに戻る-->
 
 </body>
+</html>

@@ -2,7 +2,6 @@
     pageEncoding="UTF-8"%>
 <%@ page import = "ErrorCheck.MemberRegist" %>
 
-
 <% MemberRegist m = (MemberRegist)request.getAttribute("MEMBER"); %>
 <!DOCTYPE html>
 <html lang="ja">
@@ -25,21 +24,17 @@
 <![endif]-->
 </head>
 
-
 <body>
 <noscript>
 <p>※このページはJavaScriptを使用しています。JavaScript設定を有効にしてご覧ください。</p>
 </noscript>
 
-
 <!--ヘッダー-->
 <header class="header clearfix">
   <button type="button" id="toggleMenu" class="toggle_menu"> <i class="fa fa-bars"></i> </button>
 
-
   <!--ロゴ（ページ左上のサイト名）-->
   <h1><a href="index.html" title="ここにキーワードを含むページの見出しを記入">まさる堂</a></h1>
-
 
   <!--ページ右上の表示-->
   <div class="user info"><a href="user.html">
@@ -102,14 +97,12 @@
   </ul>
   <button id="collapse_menu" class="collapse_menu"> <i class="collapse_menu--icon  fa fa-fw"></i> <span class="collapse_menu--label">Recolher menu</span> </button>
 
-
   <!--ページ左下の表示-->
   <p class="copyright">Copyright(C) 2015<br>
     サイト名 All Rights Reserved.</p>
 </nav>
 <div class="wrapper">
   <div class="content">
-
 
     <!--ページのメイン部分-->
     <article>
@@ -137,14 +130,12 @@
               </dd>
             </dl>
 
-
 			<div class="form_conf">
 			<form action="./ContactRegist" method="get">
 			<p class="kakunin" >
 			<input type="submit" value="送信" class="btn_submit">
 			</p>
 			</form>
-
 
 			<form action="./ContactInput" method="get">
 			<input type="hidden" name="name" value="<%=m.getName() %>">
@@ -156,7 +147,6 @@
 			</p>
 			</form>
 			</div>
-
 
         </div>
         <p>※上記フォームを利用するには <a href="http://www.sophia-it.com/content/CGI" target="_blank"> CGI </a> などのプログラムが必要です。</p>

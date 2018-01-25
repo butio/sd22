@@ -112,6 +112,7 @@ System.out.println(aryTable.get(0));
 <table border=1>
 <tr>
 	<td>アルバム番号</td>
+	<td>アルバム名</td>
 	<td>アルバムカウント</td>
 	<td>曲名</td>
 	<td>価格</td>

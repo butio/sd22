@@ -1,5 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ page import = "ErrorCheck.MemberRegist" %>
+
+<% MemberRegist m = (MemberRegist)request.getAttribute("MEMBER"); %>
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html lang="ja">
 <head>
@@ -103,44 +107,67 @@
 
     <!--ページのメイン部分-->
     <article>
-      <h2>Login</h2>
-      <hr>
-      <section class="account">
+      <h2>Userregistration</h2>
+      <section>
         <div class="form">
-          <h3>アカウントをお持ちの方</h3>
-          <form action="./UserLogin" method="get" >
+          <p> 下記フォームをご入力の上、「確認画面へ」をクリックしてください。</p>
+          <form action="./NewUserOutput" method="get" >
             <dl class="clearfix">
-              <dt>メールアドレス<span class="required"></span></dt>
+              <dt>お名前<span class="required">【必須】</span></dt>
               <dd>
-                <input name="mail" type="text" class="txt ina" />
+                <input name="name" type="text" class="txt" value="<%=m.getName()%>"/>
+                                <span class="error"><%=m.errorName() %></span>
               </dd>
             </dl>
             <dl class="clearfix">
-              <dt>パスワード<span class="required"></span></dt>
+              <dt>ニックネーム<span class="required">【必須】</span></dt>
               <dd>
-                <input name="pass" type="password" class="txt ina" />
+                <input name="nickname" type="text" class="txt" value="<%=m.getNickname()%>"/>
+                                <span class="error"><%=m.errorNickname() %></span>
+              </dd>
+            </dl>
+            <dl class="clearfix">
+              <dt>メールアドレス<span class="required">【必須】</span></dt>
+              <dd>
+                <input name="mail" type="text" class="txt ina" value="<%=m.getMail()%>"/>
+                                <span class="error"><%=m.errorMail() %></span>
+              </dd>
+            </dl>
+            <dl class="clearfix">
+              <dt>パスワード<span class="required">【必須】</span></dt>
+              <dd>
+                <input name="pass" type="text" class="txt ina" value="<%=m.getPass()%>"/>
+                                <span class="error"><%=m.errorPass() %></span>
+              </dd>
+            </dl>
+            <dl class="clearfix">
+              <dt>住所<span class="required">【必須】</span></dt>
+              <dd>
+                <input name="address" type="text" class="txt" value="<%=m.getAdoress()%>"/>
+                                <span class="error"><%=m.errorAdoress() %></span>
+              </dd>
+            </dl>
+            <dl class="clearfix">
+              <dt>電話番号<span class="required">【必須】</span></dt>
+              <dd>
+                <input name="telnumber" type="text" class="txt ina" value="<%=m.getTelnumber()%>"/>
+                                <span class="error"><%=m.errorTelnumber() %></span>
+              </dd>
+            </dl>
+            <dl class="clearfix">
+              <dt>クレジットカード<span class="required">【必須】</span></dt>
+              <dd>
+                <input name="card" type="text" class="txt ina" value="<%=m.getCard()%>"/>
+                                <span class="error"><%=m.errorCard() %></span>
               </dd>
             </dl>
             <p class="kakunin">
-              <input type="submit" value="サインイン" class="btn_submit">
+              <input type="submit" value="確認画面へ" class="btn_submit">
             </p>
           </form>
-      </section>
-      <section class="newuser">
-        <div class="form">
-          <form action="./NewUserInput" >
-            <h3>新規登録</h3>
-            <dl class="clearfix">
-              まさる堂での曲の購入・ダウンロードにはアカウント登録（無料）が必要となります。
-            </dl>
-            <dl class="clearfix">
-              メールアドレスのみ登録ができます。
-            </dl>
-            <p class="kakunin">
-              <input type="submit" value="新規登録[無料]" class="btn_submit">
-            </p>
-          </form>
-          </div>
+        </div>
+        <p>※上記フォームを利用するには <a href="http://www.sophia-it.com/content/CGI" target="_blank"> CGI </a> などのプログラムが必要です。</p>
+        <p> <a href="http://cgi-design.net/" target="_blank"> CGI-design </a> </p>
       </section>
     </article>
 
@@ -170,3 +197,4 @@
 <script src="js/scrolltopcontrol.js"></script> <!--スクロールしながらページのトップに戻る-->
 
 </body>
+</html>

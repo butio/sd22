@@ -124,7 +124,11 @@
         <hr>
         <div id ="music">
         <p>収録曲</p>
+                            <form action="./MusicCartSubServlet" method="get" enctype="multipart/form-data">
+            <input type="hidden" name="album_id" value="31">
+			<input type="hidden" name="album_count" value="1">
         <p>1 TYCOON<input type="submit" value="カートに入れる" class="bttn_submit"></p><hr>
+        </form>
         <p>2 Q.E.D<input type="submit" value="カートに入れる" class="bttn_submit"></p><hr>
         <p>3 シリウス<input type="submit" value="カートに入れる" class="bttn_submit"></p><hr>
         <p>4 SHOUT LOVE<input type="submit" value="カートに入れる" class="bttn_submit"></p><hr>

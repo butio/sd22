@@ -45,14 +45,23 @@ public class MusicCartServlet extends HttpServlet {
 			 String album_id = request.getParameter("album_id");
 			 String album_count = request.getParameter("album_count");
 
+
 			 Dao dao = null;
 			 ResultSet rs = null;
 			 try{
+				 System.out.println("あ");
 					dao = new Dao();
-					rs = dao.execute("SELECT album_id,album_count,music_name,price,releasedate FROM music where album_id = "+ album_id +";");
+					System.out.println("い");
+					System.out.println("SELECT album.album_id, album_name, album_count, music_name, price, releasedate " +
+							"FROM album INNER JOIN music ON album.album_id = music.album_id " +
+							"WHERE album.album_id = "+ album_id +";");
+					rs = dao.execute("SELECT album.album_id, album_name, album_count, music_name, price, releasedate " +
+							"FROM album INNER JOIN music ON album.album_id = music.album_id " +
+							"WHERE album.album_id = "+ album_id +";");
 					while(rs.next()){
 						ArrayList<String> rec = new ArrayList<String>();
 						rec.add(rs.getString("album_id"));
+						rec.add(rs.getString("album_name"));
 						rec.add(rs.getString("album_count"));
 						rec.add(rs.getString("music_name"));
 						rec.add(rs.getString("price"));

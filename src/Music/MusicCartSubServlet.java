@@ -15,16 +15,16 @@ import javax.servlet.http.HttpSession;
 import Dao.Dao;
 
 /**
- * Servlet implementation class MusicPurchaseServlet
+ * Servlet implementation class MusicCartSubServlet
  */
-@WebServlet("/MusicPurchaseServlet")
-public class MusicPurchaseServlet extends HttpServlet {
+@WebServlet("/MusicCartSubServlet")
+public class MusicCartSubServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public MusicPurchaseServlet() {
+    public MusicCartSubServlet() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -34,28 +34,33 @@ public class MusicPurchaseServlet extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
+
 		//文字化け対策
 		request.setCharacterEncoding("UTF-8");
 		response.setCharacterEncoding("UTF-8");
 
-		ArrayList<ArrayList<String>> purchaseList=new ArrayList<ArrayList<String>>();
+		ArrayList<ArrayList<String>> musicList=new ArrayList<ArrayList<String>>();
 		HttpSession session = request.getSession();
+
+		 String album_id = request.getParameter("album_id");
+		 String album_count = request.getParameter("album_count");
 
 		 Dao dao = null;
 		 ResultSet rs = null;
 		 try{
 				dao = new Dao();
-				rs = dao.execute("SELECT purchase.purchase_no, total, music.music_name, music.price, releasedate FROM purchase " +
-						"INNER JOIN details ON purchase.purchase_no = details.purchase_no " +
-						"INNER JOIN music ON music.album_id = details.album_id && music.album_count = details.album_count " +
-						"WHERE user_id = "+session.getAttribute("ID") +";");
+				rs = dao.execute("SELECT album.album_id, album_name, album_count, music_name, price, releasedate " +
+						"FROM album INNER JOIN music ON album.album_id = music.album_id " +
+						"WHERE album.album_id = "+ album_id +" && album_count = "+album_count+";");
 				while(rs.next()){
 					ArrayList<String> rec = new ArrayList<String>();
-					rec.add(rs.getString("purchase_no"));
+					rec.add(rs.getString("album_id"));
+					rec.add(rs.getString("album_name"));
+					rec.add(rs.getString("album_count"));
 					rec.add(rs.getString("music_name"));
 					rec.add(rs.getString("price"));
 					rec.add(rs.getString("releasedate"));
-					purchaseList.add(rec);
+					musicList.add(rec);
 				}
 			}catch(Exception e){
 			}finally{
@@ -68,12 +73,11 @@ public class MusicPurchaseServlet extends HttpServlet {
 				catch(Exception e){
 				}
 			}
-		 System.out.println(purchaseList);
-			request.setAttribute("PCL",purchaseList);
+		 System.out.println(musicList);
+			request.setAttribute("MSL",musicList);
 			RequestDispatcher rd = request.getRequestDispatcher("cart.jsp");
 			rd.forward(request, response);
 	}
-
 
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
